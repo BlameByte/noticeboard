@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+
+}
+
+h3 {
+	border-bottom: 1px solid black;
+	margin: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+	font-family: "Palatino Linotype", serif;
+}
+
+h4 {
+	margin: 5px 0 3px 0;
+	font-family: "Lucida Grande", sans-serif;
+}
+
+ul, ol {
+	margin: 0px;
+	padding-left: 20%;
+}
+
+#woodenbox, #board {
+	margin: 0;
+	padding: 0;
+}
+
+#woodenbox {
+	width: 96%;
+	height: 92%;
+	position: absolute;
+	background-image: url('../images/wood.jpg');
+	padding: 2%;
+}
+
+#board {
+	height: 100%;
+	position: relative;
+	background-image: url('../images/cork.jpg');
+	border-radius: 6px;
+}
+
+/* CSS3 Animation which zooms in and puts to the top, used when hovering over note. */
+@keyframes boost {
+	100% {
+		transform: scale(1.02, 1.02); 
+		z-index: 5
+	}
+}
+
+/* This is used for icons as a span instead of img. */
+.iconholder {
+	width: 20px;
+	height: 16px;
+	display: inline-block;
+	vertical-align:middle;
+}
+
+/* This is used by the notes, there are lot which is overritten by the javascript. */
+.databox {
+	position: absolute;
+	background-image: url('../images/small.png');
+	font-family: Consolas, Corbel, sans-serif;
+	font-size: 16px;
+	border: 2px outset yellow;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px;
+	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+	-moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+/* This is the note hover effect which links to the boost animation above. */
+.databox:hover {
+	cursor: pointer;
+	z-index: 5;
+	animation: boost 0.375s ease-out;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.yellow {
+	background-image: url('../images/tint-yellow.gif');
+}
+
+.blue {
+	background-image: url('../images/tint-blue.gif');
+}
+
+.pink {
+	background-image: url('../images/tint-pink.gif');
+}
+
+.green {
+	background-image: url('../images/tint-green.gif');
+}
+
+.orange {
+	background-image: url('../images/tint-orange.gif');
+}
+
+.tickbox {
+	width: 20px;
+	height: 20px;
+}
+
+.crossed {
+	color: red;
+}
+
+.checked {
+	color: green;
+}
